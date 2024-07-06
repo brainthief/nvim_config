@@ -27,7 +27,10 @@ sudo npm install -g eslint_d
 sudo npm install -g typescript-language-server
 ```
 
-# Neovim keybinds (from : https://gist.github.com/kashifulhaque/d84e407b239782d7f381cc921c31c2fe)
+# Neovim keybinds
+
+ (from : https://gist.github.com/kashifulhaque/d84e407b239782d7f381cc921c31c2fe)
+
 - Capital letters do the opposite of small letters in command (Press shift to trigger capital letters)
 - `_` (underscore) to move the cursor at the beginning of line (doesn't switch to insert mode)
   - `0` (zero) moves the cursor to the zeroth position of the line (doesn't switch to insert mode)
@@ -94,3 +97,91 @@ sudo npm install -g typescript-language-server
 ## **Other useful stuff** ✍🏻
 - [Vim as your editor by Primeagen](https://youtu.be/X6AR2RMB5tE)
 - [Cheatsheet](https://www.reddit.com/r/neovim/comments/12qku4w/nvchad_cheatsheet)
+
+# VIM key binds
+
+- `Normal Mode`: Default state for efficient movement, deletion, searching, and more.
+- `Insert Mode`: Allows you to type text directly into your file.
+- `Visual Mode`: Enables text selection for manipulation.
+
+## Normal mode
+
+```
+h  --> move left
+j  --> move down
+k  --> move up
+l  --> move right
+gg  --> Move to the first line of the page
+G   --> Move to the last line of the page
+:number   --> Go to the line number
+$  --> Go to the end of the line
+0  --> Go to the start of the line
+b  --> Go to the previous word
+w  --> Go to the next word
+
+editing in Normal mode:
+x   --> Delete the character under the cursor
+dd  --> Delete the entire line
+yy  --> Copy (yank) the entire line
+p   --> Paste the previously deleted or copied text after the cursor
+
+u          --> Undo the last action
+Ctrl + r   --> Redo the undone action
+
+/              --> Start searching forward
+?              --> Start searching backward
+:s/old/new/g   --> Replace all occurrences of "old" with "new" in the entire file
+
+
+```
+
+## Insert mode
+
+```
+Esc   --> Return to Normal Mode
+i     --> Start inserting text before the cursor
+a     --> Start inserting text after the cursor
+o     --> Open a new line below the current line and start inserting text
+```
+
+
+## Visual mode
+
+```
+v          --> Start character-wise visual mode
+V          --> Start line-wise visual mode
+Ctrl + v   --> Start block-wise visual mode
+d          --> Delete the selected text
+y          --> Copy (yank) the selected text
+p          --> Paste the copied text after the cursor
+```
+
+## More navigation
+
+```
+Ctrl + u   --> Move half a screen up
+Ctrl + d   --> Move half a screen down
+Ctrl + b   --> Move one full screen up
+Ctrl + f   --> Move one full screen down
+
+(  --> Jump to the beginning of the previous sentence
+)  --> Jump to the beginning of the next sentence
+{  --> Jump to the beginning of the previous paragraph
+}  --> Jump to the beginning of the next paragraph
+
+]]  --> Move to the beginning of the next function
+[[  --> Move to the beginning of the previous function
+>>  --> Indent the current line to the right
+<<  --> Indent the current line to the left
+zf{motion}  --> Create a fold (replace {motion} with a movement command)
+zo          --> Open a fold
+zc          --> Close a fold
+zr          --> Reduce folding level throughout the file
+zm          --> Increase folding level throughout the file
+
+gcc  --> Comment/uncomment the current line
+gc{motion}  --> Comment/uncomment the lines covered by {motion}
+%  --> Move to the matching parenthesis, bracket, or brace
+```
+
+From: https://www.freecodecamp.org/news/vim-key-bindings-reference/
