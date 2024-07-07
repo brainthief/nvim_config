@@ -185,3 +185,25 @@ gc{motion}  --> Comment/uncomment the lines covered by {motion}
 ```
 
 From: https://www.freecodecamp.org/news/vim-key-bindings-reference/
+
+# Work with GIT
+
+`:Git` - git status
+`:Git help` - furgitive manual
+
+`:Git` lange - navigation (up/down):
+`-` - mark as staget
+`Shift + v + down` - pasirinkti kelis
+`+` - inline informacija kad buvo pakeisti
+`Enter` - open a file
+
+`Gvdiff` - vertical split diff
+`Gvdiff <branch>` - vertical branch comparison
+`[{ + c` - persjungti tarp pakeitimu
+
+`:Gwrite` - git add filename
+`:Gread` - git reset
+
+`:Git log` - lokai pakeitimu
+`:Git blame` - parodo komitorius
+`space + T + D` - parodo senesnius pakeitimus (space TD vel pasleps)
